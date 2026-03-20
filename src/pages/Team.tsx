@@ -13,12 +13,21 @@ export default function Team() {
 
   return (
     <PageTransition>
-      <div className="pt-32 pb-24 bg-cream min-h-screen">
-        <div className="container mx-auto px-6 md:px-12">
-          
-          {/* Header */}
-          <div className="max-w-3xl mb-20">
-            <Reveal>
+      <div className="bg-cream min-h-screen">
+        {/* Hero Section */}
+        <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center overflow-hidden min-h-[60vh]">
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="https://github.com/agelmet/Image-hosting-/blob/main/2026-02-16-13.jpg?raw=true" 
+              alt="Ψ-PSY Team" 
+              className="w-full h-full object-cover object-center"
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute inset-0 bg-forest/70" />
+          </div>
+
+          <div className="container mx-auto px-6 md:px-12 relative z-10 text-center text-cream">
+            <Reveal direction="up">
               <p className="text-sage text-sm font-medium tracking-wider uppercase mb-4">
                 {t.subtitle}
               </p>
@@ -32,12 +41,15 @@ export default function Team() {
               </TextMask>
             </h1>
             <Reveal delay={0.3}>
-              <p className="text-xl text-forest/70 font-light">
+              <p className="text-xl text-cream/80 font-light max-w-2xl mx-auto">
                 {t.desc}
               </p>
             </Reveal>
           </div>
+        </section>
 
+        <div className="container mx-auto px-6 md:px-12 py-24">
+          
           {/* Team Grid */}
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 mb-32">
             {currentTeam.map((member) => (

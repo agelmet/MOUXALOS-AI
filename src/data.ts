@@ -551,10 +551,15 @@ export const team = {
 };
 
 export const galleryImages = [
-  "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/1.jpg",
-  "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/2.jpg",
-  "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/3.jpg",
-  "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/4.jpg",
-  "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/5.jpg",
-  "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/6.jpg",
+  "https://github.com/agelmet/Image-hosting-/blob/main/2026-02-16.jpg?raw=true",
+  "https://github.com/agelmet/Image-hosting-/blob/main/2026-02-16-9.jpg?raw=true",
+  "https://github.com/agelmet/Image-hosting-/blob/main/2026-02-16-8.jpg?raw=true",
+  "https://github.com/agelmet/Image-hosting-/blob/main/2026-02-16-7.jpg?raw=true",
+  "https://github.com/agelmet/Image-hosting-/blob/main/2026-02-16-6.jpg?raw=true",
+  "https://github.com/agelmet/Image-hosting-/blob/main/2026-02-16-5.jpg?raw=true",
+  "https://github.com/agelmet/Image-hosting-/blob/main/2026-02-16-4.jpg?raw=true",
+  "https://github.com/agelmet/Image-hosting-/blob/main/2026-02-16-2.jpg?raw=true",
+  "https://github.com/agelmet/Image-hosting-/blob/main/2026-02-16-14.jpg?raw=true",
+  "https://github.com/agelmet/Image-hosting-/blob/main/2026-02-16-13.jpg?raw=true",
+  "https://github.com/agelmet/Image-hosting-/blob/main/2026-02-16-11.jpg?raw=true"
 ];

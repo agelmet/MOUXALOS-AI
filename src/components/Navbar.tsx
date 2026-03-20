@@ -46,7 +46,7 @@ export function Navbar() {
           <img 
             src="https://raw.githubusercontent.com/agelmet/Image-hosting-/main/597891457_1432943218836853_7585099840606536804_n.jpg" 
             alt="Ψ-PSY Logo" 
-            className="h-10 w-auto object-contain"
+            className="h-16 w-auto object-contain"
             referrerPolicy="no-referrer"
           />
         </Link>

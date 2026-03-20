@@ -20,8 +20,8 @@ export default function Home() {
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://raw.githubusercontent.com/agelmet/Image-hosting-/main/hero%20image.jpg" 
-            alt="Ψ-PSY Interior" 
+            src="https://github.com/agelmet/Image-hosting-/blob/main/2026-02-16-10.jpg?raw=true" 
+            alt="Ψ-PSY Center" 
             className="w-full h-full object-cover object-center"
             referrerPolicy="no-referrer"
           />
@@ -124,7 +124,7 @@ export default function Home() {
             <Reveal direction="left">
               <div className="relative aspect-[4/5] w-full max-w-md mx-auto lg:ml-auto">
                 <img 
-                  src="https://raw.githubusercontent.com/agelmet/Image-hosting-/main/philosophy.jpg" 
+                  src="https://raw.githubusercontent.com/agelmet/MOUXALOS/refs/heads/main/2026-02-16.jpg" 
                   alt="Ψ-PSY Philosophy" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -243,8 +243,8 @@ export default function Home() {
             </Reveal>
           </div>
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {galleryImages.slice(0, 3).map((src, index) => (
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {galleryImages.map((src, index) => (
               <StaggerItem key={index}>
                 <div className="relative aspect-square overflow-hidden group">
                   <img 

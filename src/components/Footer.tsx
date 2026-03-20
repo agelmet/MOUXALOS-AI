@@ -13,12 +13,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {/* Brand */}
           <div className="flex flex-col items-start">
-            <img 
-              src="https://raw.githubusercontent.com/agelmet/Image-hosting-/main/597891457_1432943218836853_7585099840606536804_n.jpg" 
-              alt="Ψ-PSY Logo" 
-              className="h-12 w-auto object-contain mb-6 brightness-0 invert"
-              referrerPolicy="no-referrer"
-            />
+            <h3 className="text-2xl font-display mb-4 tracking-wider">Ψ-PSY</h3>
             <p className="text-cream/70 max-w-xs font-light">
               {t.desc}
             </p>
