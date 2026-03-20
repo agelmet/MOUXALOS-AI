@@ -359,7 +359,10 @@ export const team = {
       role: "ΨΥΧΟΘΕΡΑΠΕΥΤΗΣ & ΕΚΠΑΙΔΕΥΤΙΚΟΣ",
       image: "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/GiorgosMisailidis%20.jpeg",
       bio: [
-        "Ο Γιώργος Μισαηλίδης είναι Ψυχοθεραπευτής και Εκπαιδευτικός με πολυετή εμπειρία στην υποστήριξη ενηλίκων και εφήβων."
+        "Ο Γιώργος Μισαηλίδης είναι Ψυχοθεραπευτής και Εκπαιδευτικός με πολυετή εμπειρία στην υποστήριξη ενηλίκων και εφήβων.",
+        "Είναι απόφοιτος του τμήματος Ψυχολογίας του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών (ΕΚΠΑ) και κάτοχος μεταπτυχιακού διπλώματος (MSc) στην Κλινική Ψυχολογία από το ίδιο πανεπιστήμιο.",
+        "Έχει εκπαιδευτεί στη Γνωσιακή Συμπεριφορική Θεραπεία (CBT) και στη Θεραπεία Σχημάτων, προσεγγίσεις τις οποίες ενσωματώνει στην κλινική του πρακτική για την αντιμετώπιση αγχωδών διαταραχών, κατάθλιψης και δυσκολιών στις διαπροσωπικές σχέσεις.",
+        "Παράλληλα με την κλινική του εργασία, δραστηριοποιείται στον χώρο της εκπαίδευσης, παρέχοντας συμβουλευτική υποστήριξη σε εφήβους, γονείς και εκπαιδευτικούς, με στόχο την προαγωγή της ψυχικής ανθεκτικότητας στο σχολικό περιβάλλον."
       ],
       specialties: ["ΑΤΟΜΙΚΗ ΨΥΧΟΘΕΡΑΠΕΙΑ", "ΣΥΜΒΟΥΛΕΥΤΙΚΗ ΕΦΗΒΩΝ"]
     },
@@ -369,7 +372,10 @@ export const team = {
       role: "ΕΚΠΑΙΔΕΥΤΙΚΟΣ ΕΙΔΙΚΗΣ ΑΓΩΓΗΣ",
       image: "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/ΦΩΤΟ%20ΜΑΥΡΕΑ.jpg",
       bio: [
-        "Η Καλλιόπη Μαυρέα είναι Εκπαιδευτικός Ειδικής Αγωγής με μεταπτυχιακές και διδακτορικές σπουδές. Εξειδικεύεται στην υποστήριξη παιδιών με μαθησιακές δυσκολίες και στην καθοδήγηση γονέων."
+        "Η Καλλιόπη Μαυρέα είναι Εκπαιδευτικός Ειδικής Αγωγής με μεταπτυχιακές και διδακτορικές σπουδές. Εξειδικεύεται στην υποστήριξη παιδιών με μαθησιακές δυσκολίες και στην καθοδήγηση γονέων.",
+        "Διαθέτει πολυετή εμπειρία στην αξιολόγηση και τον σχεδιασμό εξατομικευμένων προγραμμάτων παρέμβασης για παιδιά με Δυσλεξία, Διαταραχή Ελλειμματικής Προσοχής και Υπερκινητικότητας (ΔΕΠΥ), και διαταραχές στο φάσμα του αυτισμού.",
+        "Στο πλαίσιο της δουλειάς της, συνεργάζεται στενά με τις οικογένειες και τα σχολεία, προσφέροντας συμβουλευτική και πρακτικές στρατηγικές για τη βελτίωση της καθημερινότητας και της σχολικής επίδοσης των παιδιών.",
+        "Το ερευνητικό της έργο επικεντρώνεται στην ανάπτυξη καινοτόμων εκπαιδευτικών εργαλείων και στη συμπερίληψη μαθητών με ειδικές εκπαιδευτικές ανάγκες στο γενικό σχολείο."
       ],
       specialties: ["ΕΙΔΙΚΗ ΑΓΩΓΗ", "ΣΥΜΒΟΥΛΕΥΤΙΚΗ ΓΟΝΕΩΝ"]
     },
@@ -379,7 +385,10 @@ export const team = {
       role: "ΣΥΜΒΟΥΛΟΣ ΨΥΧΙΚΗΣ ΥΓΕΙΑΣ",
       image: "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/Olga%20Kontraskina.jpg",
       bio: [
-        "Η Όλγα Κοντράσκινα είναι Σύμβουλος Ψυχικής Υγείας, προσφέροντας υποστήριξη σε άτομα που αντιμετωπίζουν άγχος, κατάθλιψη και δυσκολίες προσαρμογής."
+        "Η Όλγα Κοντράσκινα είναι Σύμβουλος Ψυχικής Υγείας, προσφέροντας υποστήριξη σε άτομα που αντιμετωπίζουν άγχος, κατάθλιψη και δυσκολίες προσαρμογής.",
+        "Έχει ολοκληρώσει σπουδές στην Ψυχολογία και έχει μετεκπαιδευτεί στη Συμβουλευτική και την Ψυχοθεραπεία, με έμφαση στην Προσωποκεντρική Προσέγγιση.",
+        "Η κλινική της εμπειρία περιλαμβάνει την εργασία με ενήλικες που βιώνουν κρίσεις ζωής, απώλεια, πένθος, καθώς και δυσκολίες στη διαχείριση συναισθημάτων και συγκρούσεων.",
+        "Στόχος της είναι η δημιουργία ενός ασφαλούς και υποστηρικτικού περιβάλλοντος, όπου το άτομο μπορεί να εξερευνήσει τον εαυτό του, να αναγνωρίσει τις ανάγκες του και να αναπτύξει δεξιότητες για μια πιο ικανοποιητική ζωή."
       ],
       specialties: ["ΣΥΜΒΟΥΛΕΥΤΙΚΗ", "ΔΙΑΧΕΙΡΙΣΗ ΑΓΧΟΥΣ"]
     },
@@ -389,7 +398,10 @@ export const team = {
       role: "ΨΥΧΟΛΟΓΟΣ & ΟΙΚΟΓΕΝΕΙΑΚΗ ΘΕΡΑΠΕΥΤΡΙΑ",
       image: "https://raw.githubusercontent.com/agelmet/MOUXALOS/main/tsiw.jpg",
       bio: [
-        "Η Σταυρούλα Τσιώρου είναι Ψυχολόγος και Οικογενειακή Θεραπεύτρια, με εξειδίκευση στη συστημική προσέγγιση για την επίλυση οικογενειακών συγκρούσεων."
+        "Η Σταυρούλα Τσιώρου είναι Ψυχολόγος και Οικογενειακή Θεραπεύτρια, με εξειδίκευση στη συστημική προσέγγιση για την επίλυση οικογενειακών συγκρούσεων.",
+        "Σπούδασε Ψυχολογία στο Πάντειο Πανεπιστήμιο και ολοκλήρωσε τετραετή εκπαίδευση στη Συστημική Οικογενειακή Ψυχοθεραπεία.",
+        "Εργάζεται με άτομα, ζευγάρια και οικογένειες, εστιάζοντας στη βελτίωση της επικοινωνίας, την κατανόηση των δυναμικών των σχέσεων και την αντιμετώπιση κρίσεων (όπως διαζύγιο, ασθένεια, απώλεια).",
+        "Η προσέγγισή της βασίζεται στην πεποίθηση ότι τα προβλήματα δεν ανήκουν μόνο στο άτομο, αλλά κατανοούνται και αντιμετωπίζονται καλύτερα μέσα στο πλαίσιο των σχέσεων και του περιβάλλοντός του."
       ],
       specialties: ["ΟΙΚΟΓΕΝΕΙΑΚΗ ΘΕΡΑΠΕΙΑ", "ΣΥΣΤΗΜΙΚΗ ΠΡΟΣΕΓΓΙΣΗ"]
     },
@@ -399,7 +411,10 @@ export const team = {
       role: "ΨΥΧΟΛΟΓΟΣ & EXECUTIVE COACH",
       image: "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/Georgina%20Spentzou%20Photo.jpg",
       bio: [
-        "Η Τζωρτζίνα Σπέντζου συνδυάζει την ψυχολογία με το executive coaching, βοηθώντας επαγγελματίες να αναπτύξουν τις ηγετικές τους δεξιότητες και να διαχειριστούν το εργασιακό άγχος."
+        "Η Τζωρτζίνα Σπέντζου συνδυάζει την ψυχολογία με το executive coaching, βοηθώντας επαγγελματίες να αναπτύξουν τις ηγετικές τους δεξιότητες και να διαχειριστούν το εργασιακό άγχος.",
+        "Είναι κάτοχος πτυχίου Ψυχολογίας και μεταπτυχιακού τίτλου στην Οργανωτική Ψυχολογία, με πιστοποίηση στο Executive Coaching από διεθνώς αναγνωρισμένους φορείς.",
+        "Έχει συνεργαστεί με στελέχη επιχειρήσεων και οργανισμούς, παρέχοντας συμβουλευτική για την ανάπτυξη καριέρας, τη βελτίωση της απόδοσης, τη διαχείριση αλλαγών και την επίλυση συγκρούσεων στον χώρο εργασίας.",
+        "Η μέθοδός της εστιάζει στην ενδυνάμωση του ατόμου, την ενίσχυση της αυτογνωσίας και την ανάπτυξη στρατηγικών για την επίτευξη επαγγελματικών και προσωπικών στόχων με ισορροπία."
       ],
       specialties: ["EXECUTIVE COACHING", "ΕΡΓΑΣΙΑΚΟ ΑΓΧΟΣ"]
     },
@@ -409,7 +424,10 @@ export const team = {
       role: "ΣΥΜΒΟΥΛΟΣ ΨΥΧΙΚΗΣ ΥΓΕΙΑΣ & COACH",
       image: "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/Karavakoy.jpg",
       bio: [
-        "Η Βιργινία Καραβάκου είναι Σύμβουλος Ψυχικής Υγείας και Coach, εστιάζοντας στην προσωπική ανάπτυξη και την επίτευξη στόχων."
+        "Η Βιργινία Καραβάκου είναι Σύμβουλος Ψυχικής Υγείας και Coach, εστιάζοντας στην προσωπική ανάπτυξη και την επίτευξη στόχων.",
+        "Έχει εκπαιδευτεί στη Συμβουλευτική Ψυχολογία και στο Life Coaching, προσφέροντας υποστήριξη σε άτομα που επιθυμούν να βελτιώσουν την ποιότητα της ζωής τους.",
+        "Η δουλειά της επικεντρώνεται στην ενίσχυση της αυτοπεποίθησης, τη διαχείριση του στρες, την αλλαγή περιοριστικών πεποιθήσεων και τον σχεδιασμό πλάνων δράσης για την υλοποίηση προσωπικών και επαγγελματικών οραμάτων.",
+        "Πιστεύει στη δυναμική του κάθε ανθρώπου να δημιουργήσει θετικές αλλαγές στη ζωή του και λειτουργεί ως συνοδοιπόρος σε αυτή τη διαδικασία ανακάλυψης και εξέλιξης."
       ],
       specialties: ["LIFE COACHING", "ΠΡΟΣΩΠΙΚΗ ΑΝΑΠΤΥΞΗ"]
     },
@@ -419,7 +437,10 @@ export const team = {
       role: "ΣΥΜΒΟΥΛΕΥΤΙΚΗ ΨΥΧΟΛΟΓΟΣ & ΟΜΑΔΙΚΗ ΨΥΧΟΘΕΡΑΠΕΥΤΡΙΑ",
       image: "https://raw.githubusercontent.com/agelmet/MOUXALOS/main/KORDOSH.JPG",
       bio: [
-        "Η Αλεξάνδρα Κορδόση είναι Συμβουλευτική Ψυχολόγος και Ομαδική Ψυχοθεραπεύτρια, με εμπειρία στον συντονισμό θεραπευτικών ομάδων."
+        "Η Αλεξάνδρα Κορδόση είναι Συμβουλευτική Ψυχολόγος και Ομαδική Ψυχοθεραπεύτρια, με εμπειρία στον συντονισμό θεραπευτικών ομάδων.",
+        "Κατέχει πτυχίο Ψυχολογίας και μεταπτυχιακό στη Συμβουλευτική Ψυχολογία, με εξειδίκευση στην Ομαδική Ανάλυση και Ψυχοθεραπεία.",
+        "Στην κλινική της πράξη, παρέχει ατομική και ομαδική θεραπεία σε ενήλικες, αντιμετωπίζοντας θέματα όπως άγχος, κατάθλιψη, δυσκολίες στις σχέσεις και θέματα ταυτότητας.",
+        "Η προσέγγισή της δίνει έμφαση στη δυναμική της ομάδας ως μέσο για την αυτογνωσία, την αλληλεπίδραση και τη θεραπευτική αλλαγή, προσφέροντας ένα ασφαλή χώρο για μοίρασμα και σύνδεση."
       ],
       specialties: ["ΟΜΑΔΙΚΗ ΨΥΧΟΘΕΡΑΠΕΙΑ", "ΣΥΜΒΟΥΛΕΥΤΙΚΗ"]
     },
@@ -429,7 +450,10 @@ export const team = {
       role: "ΨΥΧΟΛΟΓΟΣ - ΨΥΧΟΘΕΡΑΠΕΥΤΗΣ",
       image: "https://raw.githubusercontent.com/agelmet/MOUXALOS/main/komnimos.jpeg",
       bio: [
-        "Ο Βασίλης Κομνηνός είναι Ψυχολόγος - Ψυχοθεραπευτής, παρέχοντας ατομική θεραπεία για ένα ευρύ φάσμα ψυχολογικών προκλήσεων."
+        "Ο Βασίλης Κομνηνός είναι Ψυχολόγος - Ψυχοθεραπευτής, παρέχοντας ατομική θεραπεία για ένα ευρύ φάσμα ψυχολογικών προκλήσεων.",
+        "Είναι απόφοιτος Ψυχολογίας και έχει ολοκληρώσει εκπαίδευση στην Ψυχαναλυτική Ψυχοθεραπεία.",
+        "Η εμπειρία του περιλαμβάνει την εργασία με ενήλικες που αντιμετωπίζουν συναισθηματικές δυσκολίες, τραύμα, κρίσεις πανικού, ψυχοσωματικά συμπτώματα και δυσκολίες προσαρμογής.",
+        "Μέσα από την ψυχαναλυτική οπτική, βοηθά τους θεραπευόμενους να εξερευνήσουν ασυνείδητες συγκρούσεις, να κατανοήσουν βαθύτερα τον εαυτό τους και να απελευθερωθούν από επαναλαμβανόμενα μοτίβα που τους περιορίζουν."
       ],
       specialties: ["ΑΤΟΜΙΚΗ ΨΥΧΟΘΕΡΑΠΕΙΑ", "ΚΛΙΝΙΚΗ ΨΥΧΟΛΟΓΙΑ"]
     },
@@ -439,7 +463,10 @@ export const team = {
       role: "ΨΥΧΟΛΟΓΟΣ & ΕΙΔΙΚΕΥΟΜΕΝΗ ΨΥΧΟΘΕΡΑΠΕΥΤΡΙΑ",
       image: "https://raw.githubusercontent.com/agelmet/MOUXALOS/main/sit.jpg",
       bio: [
-        "Η Μαρίνα Σιταρένιου είναι Ψυχολόγος και Ειδικευόμενη Ψυχοθεραπεύτρια, με εστίαση στη σύγχρονη ψυχοθεραπευτική πρακτική."
+        "Η Μαρίνα Σιταρένιου είναι Ψυχολόγος και Ειδικευόμενη Ψυχοθεραπεύτρια, με εστίαση στη σύγχρονη ψυχοθεραπευτική πρακτική.",
+        "Έχει σπουδάσει Ψυχολογία και βρίσκεται σε διαδικασία ειδίκευσης στη Συνθετική Ψυχοθεραπεία, προσεγγίζοντας τον άνθρωπο ολιστικά.",
+        "Παρέχει ψυχολογική υποστήριξη και συμβουλευτική σε ενήλικες, εστιάζοντας στην ενδυνάμωση, τη διαχείριση του άγχους, τη βελτίωση της αυτοεκτίμησης και την ανάπτυξη υγιών διαπροσωπικών σχέσεων.",
+        "Η προσέγγισή της προσαρμόζεται στις μοναδικές ανάγκες κάθε θεραπευόμενου, ενσωματώνοντας τεχνικές από διάφορες θεραπευτικές σχολές για την επίτευξη των βέλτιστων αποτελεσμάτων."
       ],
       specialties: ["ΑΤΟΜΙΚΗ ΨΥΧΟΘΕΡΑΠΕΙΑ", "ΨΥΧΟΛΟΓΙΚΗ ΥΠΟΣΤΗΡΙΞΗ"]
     }
@@ -463,7 +490,10 @@ export const team = {
       role: "PSYCHOTHERAPIST & EDUCATOR",
       image: "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/GiorgosMisailidis%20.jpeg",
       bio: [
-        "Giorgos Misailidis is a Psychotherapist and Educator with years of experience in supporting adults and adolescents."
+        "Giorgos Misailidis is a Psychotherapist and Educator with years of experience in supporting adults and adolescents.",
+        "He is a graduate of the Psychology Department of the National and Kapodistrian University of Athens (NKUA) and holds a Master's degree (MSc) in Clinical Psychology from the same university.",
+        "He has been trained in Cognitive Behavioral Therapy (CBT) and Schema Therapy, approaches he integrates into his clinical practice to address anxiety disorders, depression, and difficulties in interpersonal relationships.",
+        "Alongside his clinical work, he is active in the field of education, providing counseling support to adolescents, parents, and teachers, aiming to promote mental resilience in the school environment."
       ],
       specialties: ["INDIVIDUAL PSYCHOTHERAPY", "ADOLESCENT COUNSELING"]
     },
@@ -473,7 +503,10 @@ export const team = {
       role: "SPECIAL EDUCATION TEACHER",
       image: "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/ΦΩΤΟ%20ΜΑΥΡΕΑ.jpg",
       bio: [
-        "Kalliopi Mavrea is a Special Education Teacher with postgraduate and doctoral studies. She specializes in supporting children with learning difficulties and providing parental guidance."
+        "Kalliopi Mavrea is a Special Education Teacher with postgraduate and doctoral studies. She specializes in supporting children with learning difficulties and providing parental guidance.",
+        "She has extensive experience in evaluating and designing personalized intervention programs for children with Dyslexia, Attention Deficit Hyperactivity Disorder (ADHD), and autism spectrum disorders.",
+        "In her work, she collaborates closely with families and schools, offering counseling and practical strategies to improve the daily life and academic performance of children.",
+        "Her research work focuses on the development of innovative educational tools and the inclusion of students with special educational needs in mainstream schools."
       ],
       specialties: ["SPECIAL EDUCATION", "PARENTAL COUNSELING"]
     },
@@ -483,7 +516,10 @@ export const team = {
       role: "MENTAL HEALTH COUNSELOR",
       image: "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/Olga%20Kontraskina.jpg",
       bio: [
-        "Olga Kontraskina is a Mental Health Counselor, offering support to individuals facing anxiety, depression, and adjustment difficulties."
+        "Olga Kontraskina is a Mental Health Counselor, offering support to individuals facing anxiety, depression, and adjustment difficulties.",
+        "She has completed studies in Psychology and has further trained in Counseling and Psychotherapy, with an emphasis on the Person-Centered Approach.",
+        "Her clinical experience includes working with adults experiencing life crises, loss, grief, as well as difficulties in managing emotions and conflicts.",
+        "Her goal is to create a safe and supportive environment where the individual can explore themselves, recognize their needs, and develop skills for a more satisfying life."
       ],
       specialties: ["COUNSELING", "STRESS MANAGEMENT"]
     },
@@ -493,7 +529,10 @@ export const team = {
       role: "PSYCHOLOGIST & FAMILY THERAPIST",
       image: "https://raw.githubusercontent.com/agelmet/MOUXALOS/main/tsiw.jpg",
       bio: [
-        "Stavroula Tsiorou is a Psychologist and Family Therapist, specializing in the systemic approach to resolving family conflicts."
+        "Stavroula Tsiorou is a Psychologist and Family Therapist, specializing in the systemic approach to resolving family conflicts.",
+        "She studied Psychology at Panteion University and completed a four-year training in Systemic Family Psychotherapy.",
+        "She works with individuals, couples, and families, focusing on improving communication, understanding relationship dynamics, and dealing with crises (such as divorce, illness, loss).",
+        "Her approach is based on the belief that problems do not belong only to the individual, but are better understood and addressed within the context of their relationships and environment."
       ],
       specialties: ["FAMILY THERAPY", "SYSTEMIC APPROACH"]
     },
@@ -503,7 +542,10 @@ export const team = {
       role: "PSYCHOLOGIST & EXECUTIVE COACH",
       image: "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/Georgina%20Spentzou%20Photo.jpg",
       bio: [
-        "Tzortzina Spentzou combines psychology with executive coaching, helping professionals develop their leadership skills and manage work-related stress."
+        "Tzortzina Spentzou combines psychology with executive coaching, helping professionals develop their leadership skills and manage work-related stress.",
+        "She holds a degree in Psychology and a Master's degree in Organizational Psychology, with certification in Executive Coaching from internationally recognized bodies.",
+        "She has worked with corporate executives and organizations, providing counseling for career development, performance improvement, change management, and conflict resolution in the workplace.",
+        "Her method focuses on empowering the individual, enhancing self-awareness, and developing strategies to achieve professional and personal goals with balance."
       ],
       specialties: ["EXECUTIVE COACHING", "WORK STRESS"]
     },
@@ -513,7 +555,10 @@ export const team = {
       role: "MENTAL HEALTH COUNSELOR & COACH",
       image: "https://raw.githubusercontent.com/agelmet/Image-hosting-/main/Karavakoy.jpg",
       bio: [
-        "Virginia Karavakou is a Mental Health Counselor and Coach, focusing on personal development and goal achievement."
+        "Virginia Karavakou is a Mental Health Counselor and Coach, focusing on personal development and goal achievement.",
+        "She has been trained in Counseling Psychology and Life Coaching, offering support to individuals who wish to improve the quality of their lives.",
+        "Her work focuses on boosting self-confidence, managing stress, changing limiting beliefs, and designing action plans to realize personal and professional visions.",
+        "She believes in the potential of every person to create positive changes in their life and acts as a companion in this process of discovery and evolution."
       ],
       specialties: ["LIFE COACHING", "PERSONAL DEVELOPMENT"]
     },
@@ -523,7 +568,10 @@ export const team = {
       role: "COUNSELING PSYCHOLOGIST & GROUP THERAPIST",
       image: "https://raw.githubusercontent.com/agelmet/MOUXALOS/main/KORDOSH.JPG",
       bio: [
-        "Alexandra Kordosi is a Counseling Psychologist and Group Psychotherapist, with experience in coordinating therapeutic groups."
+        "Alexandra Kordosi is a Counseling Psychologist and Group Psychotherapist, with experience in coordinating therapeutic groups.",
+        "She holds a degree in Psychology and a Master's in Counseling Psychology, specializing in Group Analysis and Psychotherapy.",
+        "In her clinical practice, she provides individual and group therapy to adults, addressing issues such as anxiety, depression, relationship difficulties, and identity issues.",
+        "Her approach emphasizes group dynamics as a means for self-awareness, interaction, and therapeutic change, offering a safe space for sharing and connection."
       ],
       specialties: ["GROUP PSYCHOTHERAPY", "COUNSELING"]
     },
@@ -533,7 +581,10 @@ export const team = {
       role: "PSYCHOLOGIST - PSYCHOTHERAPIST",
       image: "https://raw.githubusercontent.com/agelmet/MOUXALOS/main/komnimos.jpeg",
       bio: [
-        "Vasilis Komninos is a Psychologist - Psychotherapist, providing individual therapy for a wide range of psychological challenges."
+        "Vasilis Komninos is a Psychologist - Psychotherapist, providing individual therapy for a wide range of psychological challenges.",
+        "He is a Psychology graduate and has completed training in Psychoanalytic Psychotherapy.",
+        "His experience includes working with adults facing emotional difficulties, trauma, panic attacks, psychosomatic symptoms, and adjustment difficulties.",
+        "Through the psychoanalytic perspective, he helps clients explore unconscious conflicts, gain a deeper understanding of themselves, and break free from repetitive patterns that limit them."
       ],
       specialties: ["INDIVIDUAL PSYCHOTHERAPY", "CLINICAL PSYCHOLOGY"]
     },
@@ -543,7 +594,10 @@ export const team = {
       role: "PSYCHOLOGIST & PSYCHOTHERAPIST IN TRAINING",
       image: "https://raw.githubusercontent.com/agelmet/MOUXALOS/main/sit.jpg",
       bio: [
-        "Marina Sitareniou is a Psychologist and Psychotherapist in training, focusing on modern psychotherapeutic practice."
+        "Marina Sitareniou is a Psychologist and Psychotherapist in training, focusing on modern psychotherapeutic practice.",
+        "She has studied Psychology and is in the process of specializing in Integrative Psychotherapy, approaching the person holistically.",
+        "She provides psychological support and counseling to adults, focusing on empowerment, stress management, improving self-esteem, and developing healthy interpersonal relationships.",
+        "Her approach is adapted to the unique needs of each client, integrating techniques from various therapeutic schools to achieve optimal results."
       ],
       specialties: ["INDIVIDUAL PSYCHOTHERAPY", "PSYCHOLOGICAL SUPPORT"]
     }

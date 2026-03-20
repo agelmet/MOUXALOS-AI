@@ -1,5 +1,5 @@
 import { PageTransition } from "../components/PageTransition";
-import { Reveal, StaggerContainer, StaggerItem, TextMask } from "../components/Animations";
+import { Reveal, StaggerContainer, StaggerItem } from "../components/Animations";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { ui } from "../translations";
@@ -25,19 +25,11 @@ export default function Contact() {
 
           <div className="container mx-auto px-6 md:px-12 relative z-10 text-center text-cream">
             <Reveal direction="up">
-              <p className="text-sage text-sm font-medium tracking-wider uppercase mb-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-wider uppercase mb-2">
                 {t.subtitle}
-              </p>
+              </h1>
             </Reveal>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display leading-tight mb-8">
-              <TextMask>
-                <span className="block">{t.title1}</span>
-              </TextMask>
-              <TextMask delay={0.1}>
-                <span className="block italic text-sage">{t.title2}</span>
-              </TextMask>
-            </h1>
-            <Reveal delay={0.3}>
+            <Reveal delay={0.2}>
               <p className="text-xl text-cream/80 font-light max-w-2xl mx-auto">
                 {t.desc}
               </p>

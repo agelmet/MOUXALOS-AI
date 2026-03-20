@@ -35,17 +35,12 @@ export default function Home() {
             </p>
           </Reveal>
           
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-tight mb-8">
-            <TextMask>
+          <Reveal direction="up" delay={0.4}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-wider uppercase mb-8">
               <span className="block">{t.title1}</span>
-            </TextMask>
-            <TextMask delay={0.1}>
-              <span className="block italic text-sage">{t.title2}</span>
-            </TextMask>
-            <TextMask delay={0.2}>
-              <span className="block">{t.title3}</span>
-            </TextMask>
-          </h1>
+              <span className="block">{t.title2}</span>
+            </h1>
+          </Reveal>
 
           <Reveal direction="up" delay={0.6}>
             <p className="max-w-xl mx-auto text-lg md:text-xl text-cream/80 font-light mb-12">
