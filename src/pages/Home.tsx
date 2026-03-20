@@ -1,178 +1,173 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Quote } from "lucide-react";
-import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
 import { PageTransition } from "../components/PageTransition";
 import { Reveal, StaggerContainer, StaggerItem, TextMask } from "../components/Animations";
 import { ServiceCard } from "../components/ServiceCard";
 import { TeamCard } from "../components/TeamCard";
-import { services, team } from "../data";
+import { services, team, galleryImages } from "../data";
+import { useLanguage } from "../contexts/LanguageContext";
+import { ui } from "../translations";
 
 export default function Home() {
+  const { language } = useLanguage();
+  const t = ui[language].home;
+  const currentServices = services[language];
+  const currentTeam = team[language];
+
   return (
     <PageTransition>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-12 bg-cream">
+      <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
-            src="https://github.com/agelmet/Image-hosting-/blob/main/hero%20image.jpg?raw=true"
-            alt="Ψ-PSY Hero"
-            className="w-full h-full object-cover opacity-80"
-            fetchPriority="high"
+          <img 
+            src="https://raw.githubusercontent.com/agelmet/Image-hosting-/main/hero%20image.jpg" 
+            alt="Ψ-PSY Interior" 
+            className="w-full h-full object-cover object-center"
+            referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-forest/80 via-forest/60 to-cream"></div>
+          <div className="absolute inset-0 bg-forest/40" />
         </div>
 
-        <div className="container mx-auto px-6 md:px-12 relative z-10 text-center">
-          <Reveal>
-            <span className="inline-block py-2 px-6 rounded-full bg-sage/20 text-cream backdrop-blur-md border border-cream/20 text-xs md:text-sm font-bold tracking-[0.2em] uppercase mb-8 font-body">
-              ΚΕΝΤΡΟ ΨΥΧΟΛΟΓΙΑΣ & ΨΥΧΟΘΕΡΑΠΕΙΑΣ
-            </span>
-          </Reveal>
-          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-cream mb-8 leading-[1.1] font-display tracking-tight">
-            <TextMask>
-              <span>Ο Χώρος</span>
-            </TextMask>
-            <br />
-            <TextMask>
-              <span className="text-sage italic font-normal">για την</span>
-            </TextMask>
-            <br />
-            <TextMask>
-              <span>Ψυχή Σας.</span>
-            </TextMask>
-          </h1>
-          
-          <Reveal delay={0.4}>
-            <p className="text-lg md:text-2xl text-cream/90 max-w-2xl mx-auto mb-12 font-body font-light leading-relaxed">
-              Ένα ασφαλές καταφύγιο στην καρδιά της Γλυφάδας, αφιερωμένο στην προσωπική σας ανάπτυξη και ψυχική ισορροπία.
+        <div className="container mx-auto px-6 md:px-12 relative z-10 text-center text-cream">
+          <Reveal direction="up" delay={0.2}>
+            <p className="text-sm md:text-base tracking-[0.3em] uppercase mb-6 text-sage font-medium">
+              {t.subtitle}
             </p>
           </Reveal>
           
-          <Reveal delay={0.6}>
+          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-tight mb-8">
+            <TextMask>
+              <span className="block">{t.title1}</span>
+            </TextMask>
+            <TextMask delay={0.1}>
+              <span className="block italic text-sage">{t.title2}</span>
+            </TextMask>
+            <TextMask delay={0.2}>
+              <span className="block">{t.title3}</span>
+            </TextMask>
+          </h1>
+
+          <Reveal direction="up" delay={0.6}>
+            <p className="max-w-xl mx-auto text-lg md:text-xl text-cream/80 font-light mb-12">
+              {t.desc}
+            </p>
+          </Reveal>
+
+          <Reveal direction="up" delay={0.8}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link
-                to="/ypiresies"
-                className="btn-primary group w-full sm:w-auto text-center"
+              <Link 
+                to="/ypiresies" 
+                className="px-8 py-4 bg-sage text-forest font-medium tracking-wider hover:bg-cream transition-colors duration-300 w-full sm:w-auto"
               >
-                <span className="relative z-10 flex items-center justify-center gap-3">
-                  ΟΙ ΥΠΗΡΕΣΙΕΣ ΜΑΣ
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </span>
+                {t.servicesBtn}
               </Link>
-              <Link
-                to="/epikoinonia"
-                className="btn-outline group w-full sm:w-auto text-center text-cream border-cream hover:bg-cream hover:text-forest"
+              <Link 
+                to="/epikoinonia" 
+                className="px-8 py-4 border border-cream text-cream font-medium tracking-wider hover:bg-cream hover:text-forest transition-colors duration-300 w-full sm:w-auto"
               >
-                <span className="relative z-10">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</span>
+                {t.bookBtn}
               </Link>
             </div>
           </Reveal>
         </div>
-        
-        {/* Scroll Indicator */}
-        <motion.div 
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 1 }}
-        >
-          <span className="text-cream/60 text-[10px] tracking-[0.3em] uppercase font-bold">SCROLL</span>
-          <div className="w-[1px] h-16 bg-cream/20 relative overflow-hidden">
-            <motion.div 
-              className="absolute top-0 left-0 w-full h-1/2 bg-sage"
-              animate={{ y: ["-100%", "200%"] }}
-              transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
-            />
+
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-cream/60">
+          <span className="text-xs tracking-widest uppercase">{t.scroll}</span>
+          <div className="w-[1px] h-12 bg-cream/30 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full bg-sage animate-scroll-down" />
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-24 md:py-40 bg-cream relative overflow-hidden">
-        <div className="grain-overlay"></div>
-        <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <Reveal direction="right">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-sage/10 rounded-3xl transform -rotate-3"></div>
-                <img
-                  src="https://github.com/agelmet/Image-hosting-/blob/main/philosophy.jpg?raw=true"
-                  alt="Η Φιλοσοφία μας"
-                  className="relative rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]"
-                  loading="lazy"
-                />
-                <div className="absolute -bottom-8 -right-8 bg-forest text-cream p-8 rounded-2xl shadow-xl max-w-xs hidden md:block">
-                  <Quote className="w-10 h-10 text-sage mb-4 opacity-50" />
-                  <p className="font-display text-xl italic leading-snug">
-                    "Η θεραπεία είναι ένα ταξίδι ανακάλυψης, όχι μια διαδικασία διόρθωσης."
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-
+      <section className="py-24 md:py-32 bg-cream text-forest">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <Reveal>
-                <span className="inline-block text-sage font-bold tracking-[0.2em] uppercase text-xs mb-6 font-body">
-                  Η ΦΙΛΟΣΟΦΙΑ ΜΑΣ
-                </span>
+                <p className="text-sage text-sm font-medium tracking-wider uppercase mb-4">
+                  {t.philSubtitle}
+                </p>
               </Reveal>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-forest mb-8 font-display leading-[1.1]">
-                Περισσότερο από ένα γραφείο. <span className="text-sage italic font-normal">Μια εμπειρία.</span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display mb-8 leading-tight">
+                <Reveal direction="up">{t.philTitle1}</Reveal>
+                <Reveal direction="up" delay={0.1}>
+                  <span className="italic text-sage">{t.philTitle2}</span>
+                </Reveal>
               </h2>
-              <StaggerContainer className="space-y-6 text-forest/80 text-lg leading-relaxed font-body mb-10">
+              
+              <Reveal delay={0.2}>
+                <blockquote className="text-2xl font-display italic text-forest/80 border-l-2 border-sage pl-6 mb-8">
+                  {t.philQuote}
+                </blockquote>
+              </Reveal>
+
+              <StaggerContainer className="space-y-6 text-lg text-forest/70 font-light mb-12">
                 <StaggerItem>
-                  <p>
-                    Στο Ψ-PSY πιστεύουμε ότι η ψυχοθεραπεία δεν πρέπει να είναι μια ψυχρή, κλινική διαδικασία. Δημιουργήσαμε έναν χώρο υψηλής αισθητικής, ζεστό και φιλόξενο, που αποπνέει ηρεμία από την πρώτη στιγμή που θα περάσετε την πόρτα μας.
-                  </p>
+                  <p>{t.philP1}</p>
                 </StaggerItem>
                 <StaggerItem>
-                  <p>
-                    Προσεγγίζουμε κάθε άνθρωπο με βαθύ σεβασμό στη μοναδικότητά του. Δεν εφαρμόζουμε τυποποιημένες λύσεις, αλλά συν-δημιουργούμε μαζί σας το θεραπευτικό πλάνο που ανταποκρίνεται στις δικές σας, ξεχωριστές ανάγκες.
-                  </p>
+                  <p>{t.philP2}</p>
                 </StaggerItem>
               </StaggerContainer>
-              <Reveal>
-                <Link to="/to-kentro" className="btn-outline group">
-                  <span className="relative z-10 flex items-center gap-3">
-                    ΓΝΩΡΙΣΤΕ ΤΟ ΚΕΝΤΡΟ ΜΑΣ
-                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                  </span>
+
+              <Reveal delay={0.4}>
+                <Link 
+                  to="/to-kentro" 
+                  className="inline-flex items-center gap-3 text-sm font-medium tracking-wider uppercase border-b border-forest pb-1 hover:text-sage hover:border-sage transition-colors"
+                >
+                  {t.philBtn} <ArrowRight size={16} />
                 </Link>
               </Reveal>
             </div>
+
+            <Reveal direction="left">
+              <div className="relative aspect-[4/5] w-full max-w-md mx-auto lg:ml-auto">
+                <img 
+                  src="https://raw.githubusercontent.com/agelmet/Image-hosting-/main/philosophy.jpg" 
+                  alt="Ψ-PSY Philosophy" 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-sage/10 -z-10" />
+                <div className="absolute -top-8 -right-8 w-32 h-32 border border-forest/10 -z-10" />
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-24 md:py-40 bg-white relative">
+      <section className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-24 gap-8">
-            <div className="max-w-2xl">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+            <div>
               <Reveal>
-                <span className="inline-block text-sage font-bold tracking-[0.2em] uppercase text-xs mb-6 font-body">
-                  ΠΩΣ ΜΠΟΡΟΥΜΕ ΝΑ ΒΟΗΘΗΣΟΥΜΕ
-                </span>
+                <p className="text-sage text-sm font-medium tracking-wider uppercase mb-4">
+                  {t.servSubtitle}
+                </p>
               </Reveal>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-forest font-display leading-[1.1]">
-                Εξειδικευμένες <span className="text-sage italic font-normal">Υπηρεσίες</span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display leading-tight">
+                <Reveal direction="up">{t.servTitle1}</Reveal>
+                <Reveal direction="up" delay={0.1}>
+                  <span className="italic text-sage">{t.servTitle2}</span>
+                </Reveal>
               </h2>
             </div>
-            <Reveal>
-              <Link to="/ypiresies" className="group flex items-center gap-3 text-forest font-bold text-sm tracking-[0.15em] uppercase hover:text-sage transition-colors">
-                ΟΛΕΣ ΟΙ ΥΠΗΡΕΣΙΕΣ
-                <span className="w-10 h-10 rounded-full border border-forest/20 flex items-center justify-center group-hover:border-sage group-hover:bg-sage/10 transition-all">
-                  <ArrowRight className="w-4 h-4" />
-                </span>
+            <Reveal delay={0.2}>
+              <Link 
+                to="/ypiresies" 
+                className="inline-flex items-center gap-3 text-sm font-medium tracking-wider uppercase hover:text-sage transition-colors"
+              >
+                {t.servAll} <ArrowRight size={16} />
               </Link>
             </Reveal>
           </div>
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {services.slice(0, 3).map((service) => (
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {currentServices.map((service) => (
               <StaggerItem key={service.id}>
-                <ServiceCard service={service} />
+                <ServiceCard {...service} />
               </StaggerItem>
             ))}
           </StaggerContainer>
@@ -180,43 +175,89 @@ export default function Home() {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 md:py-40 bg-forest text-cream relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
-        <div className="container mx-auto px-6 md:px-12 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-20 md:mb-32">
-            <Reveal>
-              <span className="inline-block text-sage font-bold tracking-[0.2em] uppercase text-xs mb-6 font-body">
-                ΟΙ ΑΝΘΡΩΠΟΙ ΜΑΣ
-              </span>
-            </Reveal>
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 font-display leading-[1.1]">
-              Η Επιστημονική <span className="text-sage italic font-normal">Ομάδα</span>
-            </h2>
-            <Reveal delay={0.2}>
-              <p className="text-lg md:text-xl text-cream/80 font-body font-light">
-                Μια προσεκτικά επιλεγμένη ομάδα κορυφαίων ειδικών, με βαθιά γνώση, ενσυναίσθηση και δέσμευση στην εξέλιξή σας.
-              </p>
-            </Reveal>
-          </div>
-
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {team.slice(0, 4).map((member) => (
-              <StaggerItem key={member.id}>
-                <TeamCard member={member} />
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-
-          <div className="mt-20 text-center">
-            <Reveal>
-              <Link to="/psychologoi" className="btn-outline border-cream text-cream hover:bg-cream hover:text-forest group">
-                <span className="relative z-10 flex items-center justify-center gap-3">
-                  ΓΝΩΡΙΣΤΕ ΟΛΗ ΤΗΝ ΟΜΑΔΑ
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </span>
+      <section className="py-24 md:py-32 bg-cream">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+            <div className="max-w-2xl">
+              <Reveal>
+                <p className="text-sage text-sm font-medium tracking-wider uppercase mb-4">
+                  {t.teamSubtitle}
+                </p>
+              </Reveal>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display leading-tight mb-6">
+                <Reveal direction="up">{t.teamTitle1}</Reveal>
+                <Reveal direction="up" delay={0.1}>
+                  <span className="italic text-sage">{t.teamTitle2}</span>
+                </Reveal>
+              </h2>
+              <Reveal delay={0.2}>
+                <p className="text-lg text-forest/70 font-light">
+                  {t.teamDesc}
+                </p>
+              </Reveal>
+            </div>
+            <Reveal delay={0.3}>
+              <Link 
+                to="/psychologoi" 
+                className="inline-flex items-center gap-3 text-sm font-medium tracking-wider uppercase hover:text-sage transition-colors"
+              >
+                {t.teamAll} <ArrowRight size={16} />
               </Link>
             </Reveal>
           </div>
+
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {currentTeam.map((member) => (
+              <StaggerItem key={member.id}>
+                <TeamCard {...member} />
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+            <div>
+              <Reveal>
+                <p className="text-sage text-sm font-medium tracking-wider uppercase mb-4">
+                  {t.gallerySubtitle}
+                </p>
+              </Reveal>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display leading-tight">
+                <Reveal direction="up">{t.galleryTitle1}</Reveal>
+                <Reveal direction="up" delay={0.1}>
+                  <span className="italic text-sage">{t.galleryTitle2}</span>
+                </Reveal>
+              </h2>
+            </div>
+            <Reveal delay={0.2}>
+              <Link 
+                to="/to-kentro" 
+                className="inline-flex items-center gap-3 text-sm font-medium tracking-wider uppercase hover:text-sage transition-colors"
+              >
+                {t.galleryAll} <ArrowRight size={16} />
+              </Link>
+            </Reveal>
+          </div>
+
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {galleryImages.slice(0, 3).map((src, index) => (
+              <StaggerItem key={index}>
+                <div className="relative aspect-square overflow-hidden group">
+                  <img 
+                    src={src} 
+                    alt={`Gallery Image ${index + 1}`} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-forest/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
         </div>
       </section>
     </PageTransition>

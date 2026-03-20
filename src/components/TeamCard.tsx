@@ -1,33 +1,35 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { team } from "../data";
+import { useLanguage } from "../contexts/LanguageContext";
+import { ui } from "../translations";
 
-export function TeamCard({ member }: { member: typeof team[0] }) {
+interface TeamCardProps {
+  id: string;
+  name: string;
+  role: string;
+  image: string;
+}
+
+export function TeamCard({ id, name, role, image }: TeamCardProps) {
+  const { language } = useLanguage();
+  const t = ui[language].team;
+
   return (
-    <Link to={`/psychologoi/${member.id}`} className="tilt-card block relative z-10 w-full">
-      <div className="tilt-card-inner bg-white rounded-3xl p-4 shadow-[0_10px_30px_rgba(21,52,48,0.03)] border border-sage/10 h-full group">
-        <div className="glare"></div>
-        <div className="overflow-hidden rounded-2xl mb-6">
-          <img
-            src={member.image}
-            alt={member.name}
-            className="team-img w-full aspect-[3/4] object-cover"
-            loading="lazy"
-          />
-        </div>
-        <div className="px-4 pb-4 card-content-3d flex flex-col">
-          <h3 className="text-xl font-bold text-forest mb-2 font-display">
-            {member.name}
-          </h3>
-          <p className="text-sage text-[10px] font-bold tracking-[0.1em] uppercase mb-1 flex-shrink-0">
-            {member.role}
-          </p>
-          <div className="mt-4">
-            <span className="inline-flex items-center gap-2 text-forest font-bold text-xs uppercase tracking-widest group-hover:text-sage transition-colors">
-              ΠΛΗΡΕΣ ΒΙΟΓΡΑΦΙΚΟ <ArrowRight className="w-4 h-4" />
-            </span>
-          </div>
-        </div>
+    <Link to={`/psychologoi/${id}`} className="group block">
+      <div className="relative overflow-hidden aspect-[3/4] mb-6">
+        <img 
+          src={image} 
+          alt={name} 
+          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-forest/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      </div>
+      <h3 className="text-2xl font-display mb-2">{name}</h3>
+      <p className="text-sage text-sm font-medium tracking-wider mb-4">{role}</p>
+      <div className="flex items-center gap-2 text-sm font-medium tracking-wider uppercase text-forest/60 group-hover:text-forest transition-colors duration-300">
+        <span>{t.fullBio}</span>
+        <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform duration-300" />
       </div>
     </Link>
   );

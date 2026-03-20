@@ -15,6 +15,7 @@ import TeamDetail from "./pages/TeamDetail";
 import Center from "./pages/Center";
 import Contact from "./pages/Contact";
 import { useEffect } from "react";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -47,15 +48,17 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-cream font-body text-forest selection:bg-sage/30 selection:text-forest">
-        <Navbar />
-        <main className="flex-grow">
-          <AnimatedRoutes />
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <LanguageProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="flex flex-col min-h-screen bg-cream font-body text-forest selection:bg-sage/30 selection:text-forest">
+          <Navbar />
+          <main className="flex-grow">
+            <AnimatedRoutes />
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </LanguageProvider>
   );
 }

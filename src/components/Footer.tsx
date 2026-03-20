@@ -1,27 +1,80 @@
+import { Link } from "react-router-dom";
+import { useLanguage } from "../contexts/LanguageContext";
+import { ui } from "../translations";
+
 export function Footer() {
+  const { language } = useLanguage();
+  const t = ui[language].footer;
+  const navT = ui[language].nav;
+
   return (
-    <footer className="bg-forest-deep text-white/60 py-12 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
-        <div>
-          <h3 className="text-2xl font-display text-white mb-4">Ψ-PSY</h3>
-          <p className="font-body text-sm leading-relaxed">
-            Ινστιτούτο Ψυχικής Υγείας & Ψυχοθεραπείας. Ένας ασφαλής χώρος αφιερωμένος στην ψυχική σας υγεία.
-          </p>
+    <footer className="bg-forest text-cream py-16">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+          {/* Brand */}
+          <div className="flex flex-col items-start">
+            <img 
+              src="https://raw.githubusercontent.com/agelmet/Image-hosting-/main/597891457_1432943218836853_7585099840606536804_n.jpg" 
+              alt="Ψ-PSY Logo" 
+              className="h-12 w-auto object-contain mb-6 brightness-0 invert"
+              referrerPolicy="no-referrer"
+            />
+            <p className="text-cream/70 max-w-xs font-light">
+              {t.desc}
+            </p>
+          </div>
+
+          {/* Links */}
+          <div>
+            <h4 className="font-display text-xl mb-6 tracking-wider">{t.quickLinks}</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/" className="text-cream/70 hover:text-sage transition-colors">
+                  {navT.home}
+                </Link>
+              </li>
+              <li>
+                <Link to="/ypiresies" className="text-cream/70 hover:text-sage transition-colors">
+                  {t.services}
+                </Link>
+              </li>
+              <li>
+                <Link to="/psychologoi" className="text-cream/70 hover:text-sage transition-colors">
+                  {navT.team}
+                </Link>
+              </li>
+              <li>
+                <Link to="/to-kentro" className="text-cream/70 hover:text-sage transition-colors">
+                  {navT.center}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-display text-xl mb-6 tracking-wider">{t.contact}</h4>
+            <ul className="space-y-3 text-cream/70">
+              <li>Αγγέλου Μεταξά 15, Γλυφάδα</li>
+              <li>Εμπορικό Κέντρο "Premier"</li>
+              <li>
+                <a href="tel:2108940848" className="hover:text-sage transition-colors">
+                  210 8940848
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@p-psy.gr" className="hover:text-sage transition-colors">
+                  info@p-psy.gr
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h4 className="text-sm font-bold tracking-widest text-white mb-4 uppercase">Επικοινωνια</h4>
-          <p className="font-body text-sm mb-2">Λεωφόρος Βουλιαγμένης 85, Γλυφάδα</p>
-          <p className="font-body text-sm mb-2">Τηλ: 210 1234567</p>
-          <p className="font-body text-sm">Email: info@psy-institute.gr</p>
+
+        <div className="mt-16 pt-8 border-t border-cream/20 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-cream/50">
+          <p>&copy; {new Date().getFullYear()} Ψ-PSY. {t.rights}</p>
+          <p>Designed with care.</p>
         </div>
-        <div>
-          <h4 className="text-sm font-bold tracking-widest text-white mb-4 uppercase">Ωραριο Λειτουργιας</h4>
-          <p className="font-body text-sm mb-2">Δευτέρα - Παρασκευή: 09:00 - 21:00</p>
-          <p className="font-body text-sm">Σάββατο: 10:00 - 15:00</p>
-        </div>
-      </div>
-      <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-white/10 text-center text-xs">
-        &copy; {new Date().getFullYear()} Ψ-PSY Ινστιτούτο Ψυχικής Υγείας & Ψυχοθεραπείας. All rights reserved.
       </div>
     </footer>
   );

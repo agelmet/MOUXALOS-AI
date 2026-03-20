@@ -1,133 +1,156 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { PageTransition } from "../components/PageTransition";
-import { Reveal, StaggerContainer, StaggerItem, TextMask } from "../components/Animations";
+import { Reveal, StaggerContainer, StaggerItem } from "../components/Animations";
 import { services } from "../data";
+import { useLanguage } from "../contexts/LanguageContext";
+import { ui } from "../translations";
 
 export default function ServiceDetail() {
-  const { id } = useParams();
-  const service = services.find((s) => s.id === id);
+  const { id } = useParams<{ id: string }>();
+  const { language } = useLanguage();
+  const t = ui[language].services;
+  const currentServices = services[language];
+  
+  const service = currentServices.find((s) => s.id === id);
+  const otherServices = currentServices.filter((s) => s.id !== id).slice(0, 3);
 
   if (!service) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-cream">
-        <div className="text-center">
-          <h1 className="text-4xl font-display text-forest mb-4">Η υπηρεσία δεν βρέθηκε</h1>
-          <Link to="/ypiresies" className="text-sage hover:underline flex items-center justify-center gap-2">
-            <ArrowLeft className="w-4 h-4" /> Επιστροφή στις υπηρεσίες
-          </Link>
-        </div>
+        <h1 className="text-3xl font-display text-forest">Service not found</h1>
       </div>
     );
   }
 
   return (
     <PageTransition>
-      {/* Header */}
-      <section className="pt-40 pb-20 md:pt-52 md:pb-32 bg-forest text-cream relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
-        <div className="container mx-auto px-6 md:px-12 relative z-10">
+      <div className="pt-32 pb-24 bg-cream min-h-screen">
+        <div className="container mx-auto px-6 md:px-12">
+          
+          {/* Back Link */}
           <Reveal>
-            <Link to="/ypiresies" className="inline-flex items-center gap-2 text-sage font-bold tracking-[0.1em] uppercase text-xs mb-10 hover:text-cream transition-colors">
-              <ArrowLeft className="w-4 h-4" /> ΟΛΕΣ ΟΙ ΥΠΗΡΕΣΙΕΣ
+            <Link 
+              to="/ypiresies" 
+              className="inline-flex items-center gap-2 text-sm font-medium tracking-wider uppercase text-forest/60 hover:text-sage transition-colors mb-12"
+            >
+              <ArrowLeft size={16} /> {t.back}
             </Link>
           </Reveal>
-          <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.1] font-display tracking-tight">
-              <TextMask>
-                <span>{service.title.split(" ")[0]}</span>
-              </TextMask>
-              <br />
-              <TextMask>
-                <span className="text-sage italic font-normal">{service.title.split(" ").slice(1).join(" ")}</span>
-              </TextMask>
-            </h1>
-            <Reveal delay={0.4}>
-              <p className="text-xl md:text-2xl text-cream/80 font-body font-light leading-relaxed max-w-2xl">
-                {service.subtitle}
-              </p>
-            </Reveal>
-          </div>
-        </div>
-      </section>
 
-      {/* Content */}
-      <section className="py-20 md:py-32 bg-cream">
-        <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            
+            {/* Main Content */}
             <div className="lg:col-span-8">
-              <Reveal>
-                <div className="prose prose-lg prose-headings:font-display prose-headings:text-forest prose-p:text-forest/80 prose-p:font-body max-w-none mb-16">
-                  {service.fullDesc.map((paragraph, idx) => (
-                    <p key={idx} className="mb-6 text-lg leading-relaxed">{paragraph}</p>
-                  ))}
-                </div>
+              <Reveal direction="up">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display leading-tight mb-8 text-forest">
+                  {service.title}
+                </h1>
               </Reveal>
 
-              <Reveal>
-                <div className="bg-white p-8 md:p-12 rounded-3xl shadow-[0_10px_40px_rgba(21,52,48,0.05)] border border-sage/10 mb-16">
-                  <h3 className="text-2xl font-display font-bold text-forest mb-8">Σε ποιους απευθύνεται;</h3>
-                  <StaggerContainer className="space-y-4">
-                    {service.audiences.map((item, idx) => (
-                      <StaggerItem key={idx} className="flex items-start gap-4">
-                        <CheckCircle2 className="w-6 h-6 text-sage flex-shrink-0 mt-1" />
-                        <span className="text-forest/80 font-body">{item}</span>
-                      </StaggerItem>
+              <Reveal delay={0.2}>
+                <p className="text-xl text-sage font-medium mb-12">
+                  {service.subtitle}
+                </p>
+              </Reveal>
+
+              <StaggerContainer className="space-y-6 text-lg text-forest/80 font-light mb-16">
+                {service.fullDesc.map((paragraph, index) => (
+                  <StaggerItem key={index}>
+                    <p>{paragraph}</p>
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
+
+              {/* Audiences */}
+              <Reveal direction="up">
+                <div className="bg-white p-8 md:p-12 border border-forest/10 mb-16">
+                  <h3 className="text-2xl font-display text-forest mb-8">{t.audiences}</h3>
+                  <ul className="space-y-4">
+                    {service.audiences.map((item, index) => (
+                      <li key={index} className="flex items-start gap-4 text-forest/80 font-light">
+                        <CheckCircle2 className="text-sage shrink-0 mt-1" size={20} />
+                        <span>{item}</span>
+                      </li>
                     ))}
-                  </StaggerContainer>
+                  </ul>
                 </div>
               </Reveal>
 
-              <Reveal>
-                <h3 className="text-3xl font-display font-bold text-forest mb-10">Συχνές Ερωτήσεις</h3>
-                <div className="space-y-6">
-                  {service.faqs.map((faq, idx) => (
-                    <div key={idx} className="bg-white p-8 rounded-2xl border border-sage/10">
-                      <h4 className="text-xl font-bold text-forest mb-4 font-display">{faq.q}</h4>
-                      <p className="text-forest/80 font-body leading-relaxed">{faq.a}</p>
-                    </div>
-                  ))}
+              {/* Quote/Framework */}
+              <Reveal direction="up">
+                <div className="border-l-4 border-sage pl-8 py-2 mb-16">
+                  <h4 className="text-sm font-medium tracking-wider uppercase text-forest/60 mb-4">
+                    {t.framework}
+                  </h4>
+                  <p className="text-xl font-display italic text-forest">
+                    {service.quote}
+                  </p>
                 </div>
               </Reveal>
+
+              {/* FAQs */}
+              {service.faqs && (
+                <Reveal direction="up">
+                  <div className="mb-16">
+                    <h3 className="text-3xl font-display text-forest mb-8">{t.faqs}</h3>
+                    <div className="space-y-8">
+                      {service.faqs.map((faq, index) => (
+                        <div key={index} className="border-b border-forest/10 pb-8">
+                          <h4 className="text-xl font-medium text-forest mb-4">{faq.q}</h4>
+                          <p className="text-forest/70 font-light">{faq.a}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </Reveal>
+              )}
             </div>
 
+            {/* Sidebar */}
             <div className="lg:col-span-4">
               <div className="sticky top-32">
-                <Reveal>
-                  <div className="bg-forest text-cream p-8 md:p-10 rounded-3xl mb-8">
-                    <h3 className="text-2xl font-display font-bold mb-6">Πλαίσιο Συνεδριών</h3>
-                    <p className="text-cream/80 font-body leading-relaxed mb-8 italic">
-                      "{service.quote}"
+                <Reveal direction="left" delay={0.4}>
+                  <div className="bg-forest text-cream p-8 mb-12">
+                    <h3 className="text-2xl font-display mb-4">{t.book}</h3>
+                    <p className="text-cream/70 font-light mb-8">
+                      {ui[language].services.ctaDesc}
                     </p>
-                    <Link to="/epikoinonia" className="btn-primary w-full text-center group">
-                      <span className="relative z-10 flex items-center justify-center gap-2">
-                        ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                      </span>
+                    <Link 
+                      to="/epikoinonia" 
+                      className="block w-full text-center px-6 py-4 bg-sage text-forest font-medium tracking-wider hover:bg-white transition-colors duration-300"
+                    >
+                      {t.book}
                     </Link>
                   </div>
                 </Reveal>
-                
-                <Reveal delay={0.2}>
-                  <div className="bg-white p-8 rounded-3xl border border-sage/10">
-                    <h3 className="text-lg font-display font-bold text-forest mb-6">Άλλες Υπηρεσίες</h3>
-                    <ul className="space-y-4">
-                      {services.filter(s => s.id !== service.id).map(s => (
-                        <li key={s.id}>
-                          <Link to={`/ypiresies/${s.id}`} className="text-forest/70 hover:text-sage font-body flex items-center justify-between group">
-                            <span>{s.title}</span>
-                            <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
-                          </Link>
-                        </li>
+
+                <Reveal direction="left" delay={0.5}>
+                  <div>
+                    <h4 className="text-sm font-medium tracking-wider uppercase text-forest/60 mb-6">
+                      {t.other}
+                    </h4>
+                    <div className="space-y-4">
+                      {otherServices.map((s) => (
+                        <Link 
+                          key={s.id} 
+                          to={`/ypiresies/${s.id}`}
+                          className="block p-4 border border-forest/10 hover:border-sage hover:bg-white transition-all group"
+                        >
+                          <h5 className="font-display text-lg text-forest group-hover:text-sage transition-colors">
+                            {s.title}
+                          </h5>
+                        </Link>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 </Reveal>
               </div>
             </div>
+
           </div>
         </div>
-      </section>
+      </div>
     </PageTransition>
   );
 }
